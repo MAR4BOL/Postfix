@@ -6,11 +6,11 @@ services:
     domainname: andrearruda.local
     env_file: mailserver.env
     ports:
-      - "25:25"    # SMTP  (explicit TLS => STARTTLS)
-      - "143:143"  # IMAP4 (explicit TLS => STARTTLS)
-      - "465:465"  # ESMTP (implicit TLS)
-      - "587:587"  # ESMTP (explicit TLS => STARTTLS)
-      - "993:993"  # IMAP4 (implicit TLS)
+      - "25:25"    # SMTP  Port
+      - "143:143"  # IMAP4 Port
+      - "465:465"  # ESMTP Port 
+      - "587:587"  # ESMTP Port
+      - "993:993"  # IMAP4 Port
     volumes:
       - ./docker-data/dms/mail-data/:/var/mail/
       - ./docker-data/dms/mail-state/:/var/mail-state/
